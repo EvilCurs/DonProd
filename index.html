@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Донская Кухня | Масложировая, бакалейная продукция</title>
+<meta name="description" content="Донская Кухня - производитель качественного сырья для пищевой промышленности с 1993 года">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+  background: #fff;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Header - фиксированный с изменением цвета */
+header {
+  background: linear-gradient(to bottom, rgba(180, 100, 30, 0.9), rgba(210, 150, 50, 0.8));
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  animation: fadeInDown 1s ease-out;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Класс для хедера при прокрутке */
+header.scrolled {
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header.scrolled .logo-text {
+  color: #1a1a1a;
+}
+
+header.scrolled nav a {
+  color: #1a1a1a;
+}
+
+header.scrolled nav a:hover {
+  color: #c41e3a;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #c41e3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  animation: pulse 2s infinite;
+}
+.logo-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  transition: color 0.4s ease;
+}
+nav {
+  display: flex;
+  gap: 15px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+nav a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Добавляем отступ для контента под фиксированным хедером */
+body {
+  padding-top: 70px;
+}
+
+/* Hero Section */
+.hero {
+  background: 
+    url('img/ART_FON.png') center/cover;
+  padding: 40px 0 60px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  animation: fadeIn 1.2s ease-out;
+  margin-top: -70px; /* Компенсируем отступ body */
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Полупрозрачный слой поверх фона */
+}
+.hero .container {
+  position: relative;
+  z-index: 2; /* Контент поверх полупрозрачного слоя */
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #f5e6a3;
+  animation: slideInUp 1s ease-out;
+}
+.hero p {
+  font-size: 18px;
+  opacity: 0.95;
+  max-width: 340px;
+  margin: 0 auto;
+  animation: slideInUp 1.2s ease-out;
+}
+/* Product Cards in Hero */
+.hero-cards {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  transform: rotate(-2deg);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  animation: floatIn 0.8s forwards;
+}
+.product-card:nth-child(1) { animation-delay: 0.2s; }
+.product-card:nth-child(2) { 
+  transform: rotate(1deg);
+  animation-delay: 0.4s;
+}
+.product-card:nth-child(3) { 
+  transform: rotate(-1deg);
+  animation-delay: 0.6s;
+}
+.product-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+}
+.product-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+.product-card:hover img {
+  transform: scale(1.1);
+}
+.product-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.product-card p {
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+}
+/* CTA Buttons */
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  animation: fadeIn 1.8s ease-out;
+}
+.btn-primary {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  display: inline-block;
+  transition: all 0.3s;
+  animation: bounceIn 1.8s ease-out;
+}
+.btn-primary:hover {
+  background: #333;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.btn-secondary {
+  background: #5a4a3a;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  display: inline-block;
+  transition: all 0.3s;
+  animation: bounceIn 2s ease-out;
+}
+.btn-secondary:hover {
+  background: #6a5a4a;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/* Why Us Section */
+.why-us {
+  background: #f6f5f1;
+  padding: 60px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.why-us.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 15px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+.feature-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.feature-card {
+  background: #f0ebe3;
+  border-radius: 20px;
+  padding: 30px 25px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+.feature-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  color: #c4a574;
+  font-size: 32px;
+  transition: transform 0.4s ease;
+}
+.feature-card:hover .feature-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+.feature-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+}
+/* Products Section */
+.products {
+  padding: 60px 0;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.products.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.products-intro {
+  margin-bottom: 40px;
+}
+.products-intro p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.product-item,
+.product-item-light {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.6s ease;
+}
+.product-item.visible,
+.product-item-light.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Обновленные стили для карточек товаров */
+.product-item {
+  background: linear-gradient(135deg, #d4a574 0%, #c4956a 100%);
+  border-radius: 16px;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(212, 165, 116, 0.3);
+  background: linear-gradient(135deg, #e0b485 0%, #d4a574 100%);
+}
+
+.product-item:hover::before {
+  opacity: 1;
+}
+
+/* Эффект для кнопки внутри карточки при наведении */
+.product-item:hover .btn-details {
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateX(5px);
+}
+
+/* Для светлых карточек */
+.product-item-light {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 18px 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-item-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(196, 165, 116, 0.05) 0%, rgba(196, 165, 116, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-item-light:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #c4a574;
+  background: linear-gradient(135deg, #fff 0%, #f9f7f3 100%);
+}
+
+.product-item-light:hover::before {
+  opacity: 1;
+}
+
+/* Эффект для изображения при наведении */
+.product-item:hover img {
+  transform: scale(1.08);
+}
+
+.product-item-light:hover img {
+  transform: scale(1.08);
+}
+
+.product-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+.product-item p {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+.product-item img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+  align-self: center;
+}
+.btn-details {
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+}
+.btn-details:hover {
+  background: rgba(0,0,0,0.5);
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.product-item-light {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 18px 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.product-badge {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 12px;
+  animation: pulseBadge 2s infinite alternate;
+  transition: all 0.3s ease;
+}
+.product-badge:nth-child(2) {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+.product-item-light img {
+  width: 100%;
+  max-width: 150px;
+  margin: 12px 0;
+  transition: transform 0.4s ease;
+  align-self: center;
+}
+.product-item-light:hover img {
+  transform: scale(1.05);
+}
+.product-item-light h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+.product-item-light .packaging {
+  color: #888;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.btn-order {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+.btn-order:hover {
+  background: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Контейнер для продуктовых карточек - по 4 в строке на десктопе */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+/* Эффект для бейджей при наведении */
+.product-item:hover .product-badge {
+  animation: pulseBadge 1s infinite alternate;
+  transform: scale(1.05);
+}
+
+.product-item-light:hover .product-badge {
+  animation: pulseBadge 1s infinite alternate;
+  transform: scale(1.05);
+}
+
+/* Эффект для заголовков при наведении */
+.product-item:hover h3 {
+  color: #fff8e1;
+}
+
+.product-item-light:hover h3 {
+  color: #c4a574;
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-right: 30px;
+}
+
+.modal-product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-product-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.modal-product-item:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.modal-product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.modal-product-info {
+  flex: 1;
+}
+
+.modal-product-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.modal-product-specs {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Stats Section */
+.stats {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://ext.same-assets.com/2339639548/1969437376.false') center/cover;
+  padding: 40px 20px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.stats.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stat-item {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  display: inline-block;
+  animation: popIn 0.6s forwards;
+}
+.stat-item:nth-child(1) { animation-delay: 0.2s; }
+.stat-item:nth-child(2) { animation-delay: 0.4s; }
+.stat-item:nth-child(3) { animation-delay: 0.6s; }
+.stat-item span {
+  font-weight: 600;
+}
+/* Production Section */
+.production {
+  padding: 60px 0;
+  background: #f6f5f1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.production.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.production img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s ease;
+}
+.production img.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.tab {
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #666;
+  transition: all 0.3s ease;
+}
+.tab.active {
+  background: #f0ebe3;
+  border-color: #d4c4a4;
+  color: #1a1a1a;
+  transform: scale(1.05);
+}
+.production-card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 25px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.production-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.production-card .label {
+  background: rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.production-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #c4a574;
+}
+.production-card p {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.production-card img {
+  border-radius: 12px;
+}
+/* Gallery Section */
+.gallery {
+  padding: 60px 0;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.gallery.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+.gallery-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.gallery-row img {
+  height: 150px;
+}
+/* Reviews Section */
+.reviews {
+  padding: 60px 0;
+  background: #f6f5f1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reviews.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reviews-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.reviews-header .dot {
+  width: 10px;
+  height: 10px;
+  background: #c4a574;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  animation: pulseDot 1.5s infinite;
+}
+.reviews-header .section-label {
+  display: inline;
+}
+.reviews-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #1a2b4a;
+  margin-top: 15px;
+}
+.reviews-header p {
+  color: #666;
+  margin-top: 10px;
+}
+.review-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.6s ease;
+}
+.review-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.stars {
+  color: #c4a574;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.review-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.review-card > p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.reviewer-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #4a7c59;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+.review-card:hover .reviewer-avatar {
+  transform: scale(1.1);
+}
+.reviewer-info h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.reviewer-info p {
+  font-size: 12px;
+  color: #888;
+}
+/* CTA Section */
+.cta-section {
+  background: url('img/ART_FON.png') center/cover;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  position: relative;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Полупрозрачный слой для CTA секции */
+}
+.cta-section h2,
+.cta-section .btn-cta,
+.cta-section p {
+  position: relative;
+  z-index: 2;
+}
+.cta-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+  line-height: 1.3;
+  animation: slideInUp 1s ease-out;
+}
+.btn-cta {
+  background: #fff;
+  color: #1a1a1a;
+  padding: 18px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+  animation: bounceIn 1.2s ease-out;
+}
+.btn-cta:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.btn-cta .arrow {
+  background: #1a1a1a;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.btn-cta:hover .arrow {
+  transform: rotate(90deg);
+}
+.cta-section > p {
+  font-size: 14px;
+  opacity: 0.9;
+  max-width: 320px;
+  margin: 0 auto;
+}
+/* Contacts Section */
+.contacts {
+  padding: 60px 0;
+  background: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.contacts.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contacts h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.contacts > p {
+  color: #888;
+  margin-bottom: 40px;
+}
+.contact-item {
+  margin-bottom: 35px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+.contact-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  background: #f6f5f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 28px;
+  color: #c4a574;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+.contact-item:hover .contact-icon {
+  background: #e8e4d9;
+  transform: scale(1.1) rotate(5deg);
+}
+.contact-item h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.contact-item p {
+  color: #666;
+  font-size: 14px;
+}
+#map {
+  width: 100%;
+  height: 400px;
+  margin: 30px 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+/* Form Section */
+.form-section {
+  background: #fff;
+  padding: 0 20px 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.form-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.form-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px 25px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s ease;
+}
+.form-card.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.form-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c4a574;
+  box-shadow: 0 0 0 3px rgba(196, 165, 116, 0.2);
+}
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.btn-submit {
+  width: 100%;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn-submit:hover {
+  background: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+/* Footer */
+footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 50px 0 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+.footer-logo {
+  width: 45px;
+  height: 45px;
+  background: #c41e3a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+.footer-brand h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.footer-brand p {
+  font-size: 12px;
+  opacity: 0.7;
+}
+.footer-section {
+  margin-bottom: 25px;
+}
+.footer-section h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.footer-section ul {
+  list-style: none;
+}
+.footer-section li {
+  margin-bottom: 10px;
+}
+.footer-section a {
+  color: #999;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+.footer-section a:hover {
+  color: #fff;
+}
+.footer-copyright {
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid #333;
+  margin-top: 10px;
+}
+.footer-copyright h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.footer-copyright p {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.social-links a {
+  color: #999;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-links a:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+.newsletter {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+}
+.newsletter img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s ease;
+}
+.newsletter img.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.newsletter h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.newsletter > p {
+  font-size: 13px;
+  opacity: 0.7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+.newsletter-form input:focus {
+  outline: none;
+  border-color: #c4a574;
+}
+.newsletter-form button {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  width: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s, transform 0.3s;
+}
+.newsletter-form button:hover {
+  background: #2563eb;
+  transform: scale(1.1);
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+.footer-bottom a {
+  color: #888;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--rotate, 0deg));
+  }
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+@keyframes pulseDot {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+@keyframes pulseBadge {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: scale(1.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+  }
+  .hero-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .product-card {
+    width: 280px;
+  }
+  .section-title {
+    font-size: 48px;
+  }
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  /* Продуктовые карточки - 4 в строке на десктопе */
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .product-item,
+  .product-item-light {
+    margin-bottom: 0;
+    height: auto;
+  }
+  
+  /* Эффекты при наведении на десктопе */
+  .product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(212, 165, 116, 0.4);
+  }
+  
+  .product-item-light:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-row img {
+    height: 200px;
+  }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .footer-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  /* Модальное окно на десктопе */
+  .modal {
+    max-width: 850px;
+  }
+  
+  .modal-product-item {
+    padding: 30px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="main-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <div class="logo-img">ДК</div>
+        <div class="logo-text">Донская<br>Кухня</div>
+      </div>
+      <nav>
+        <a href="#home">Главная</a>
+        <a href="#about">О компании</a>
+        <a href="#products">Продукция</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="container">
+    <h1>Донская Кухня</h1>
+    <p>Качественное сырьё для вашего производства с 1993 года</p>
+    <div class="hero-cards">
+      <div class="product-card">
+        <img src>
+        <h3>Масложировая продукция</h3>
+        <p>Подсолнечное масло, маргарин</p>
+      </div>
+      <div class="product-card">
+        <img src>
+        <h3>Бакалейная группа</h3>
+        <p>Крупы, макаронные изделия</p>
+      </div>
+      <div class="product-card">
+        <img src>
+        <h3>Кондитерское сырьё</h3>
+        <p>Мука, сахар, добавки</p>
+      </div>
+    </div>
+    <div class="cta-buttons">
+      <a href="#products" class="btn-primary">Каталог продукции</a>
+      <a href="#contacts" class="btn-secondary">Связаться с нами</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us Section -->
+<section class="why-us" id="about">
+  <div class="container">
+    <p class="section-label">Почему выбирают нас</p>
+    <h2 class="section-title">Надёжный партнёр для вашего бизнеса</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <i class="ri-award-line feature-icon"></i>
+        <h3>Сертифицированное качество</h3>
+        <p>Вся продукция соответствует ГОСТ и имеет необходимые сертификаты качества. Регулярный контроль на всех этапах производства</p>
+      </div>
+      <div class="feature-card">
+        <i class="ri-truck-line feature-icon"></i>
+        <h3>Быстрая логистика</h3>
+        <p>Собственный автопарк и налаженная логистика обеспечивают доставку в кратчайшие сроки</p>
+      </div>
+      <div class="feature-card">
+        <i class="ri-hand-heart-line feature-icon"></i>
+        <h3>Индивидуальный подход</h3>
+        <p>Гибкая система скидок, отсрочка платежа для постоянных клиентов, возможность производства под заказ</p>
+      </div>
+      <div class="feature-card">
+        
+        <h3>Широкий ассортимент продукции</h3>
+        <p>тут крутой текст с картиночкой</p>
+      </div>
+      <div class="feature-card">
+        
+        <h3>Гарантия стабильного качества и низких цен</h3>
+        <p>тут тоже крутой текст с картинкой</p>
+      </div>
+      <div class="feature-card">
+
+        <h3>Тут чето про HoReCa</h3>
+        <p>и текст</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="products" id="products">
+  <div class="container">
+    <h2 class="section-title">Наша продукция</h2>
+    <div class="products-intro">
+      <p>Мы предлагаем широкий ассортимент качественного сырья для пищевой промышленности. Вся продукция производится на современном оборудовании с соблюдением всех технологических норм и стандартов качества.</p>
+    </div>
+    
+    <div class="products-grid">
+      <!-- Масложировая продукция -->
+      <div class="product-item" onclick="openModal('maslo')">
+        <img src="img/maslo.png" alt="Масложировая продукция">
+        <h3>Масложировая продукция test git</h3>
+        <p>Подсолнечное масло рафинированное и нерафинированное</p>
+        <button class="btn-details">Подробнее <i class="ri-arrow-right-line"></i></button>
+      </div>
+      
+      <!-- Мука пшеничная высший сорт -->
+      <div class="product-item" onclick="openModal('flour')">
+        <img src="img/myka.png" alt="Мука пшеничная высший сорт">
+        <span class="product-badge">ХИТ ПРОДАЖ</span>
+        <h3>Мука пшеничная высший сорт</h3>
+        <p>Высококачественная мука для хлебопекарного производства</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+
+      <!-- Test карточка -->
+      <div class="product-item" onclick="openModal('test')">
+        <img src="img/myka.png" alt="Test продукт">
+        <span class="product-badge">ХИТ ПРОДАЖ</span>
+        <h3>Test</h3>
+        <p>Высококачественная мука для хлебопекарного производства</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+
+      <div class="product-item" onclick="openModal('test')">
+        <img src="img/myka.png" alt="Test продукт">
+        <span class="product-badge">ХИТ ПРОДАЖ</span>
+        <h3>Test</h3>
+        <p>Высококачественная мука для хлебопекарного производства</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+
+      <div class="product-item" onclick="openModal('test')">
+        <img src="img/myka.png" alt="Test продукт">
+        <span class="product-badge">ХИТ ПРОДАЖ</span>
+        <h3>Test</h3>
+        <p>Высококачественная мука для хлебопекарного производства</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+
+      <div class="product-item" onclick="openModal('test')">
+        <img src="img/myka.png" alt="Test продукт">
+        <span class="product-badge">ХИТ ПРОДАЖ</span>
+        <h3>Test</h3>
+        <p>Высококачественная мука для хлебопекарного производства</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+
+      <div class="product-item" onclick="openModal('test')">
+        <img src="img/myka.png" alt="Test продукт">
+        <span class="product-badge">ХИТ ПРОДАЖ</span>
+        <h3>Test</h3>
+        <p>Высококачественная мука для хлебопекарного производства</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+
+      <div class="product-item" onclick="openModal('test')">
+        <img src="img/myka.png" alt="Test продукт">
+        <span class="product-badge">ХИТ ПРОДАЖ</span>
+        <h3>Test</h3>
+        <p>Высококачественная мука для хлебопекарного производства</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+
+      <div class="product-item" onclick="openModal('test')">
+        <img src="img/myka.png" alt="Test продукт">
+        <span class="product-badge">ХИТ ПРОДАЖ</span>
+        <h3>Test</h3>
+        <p>Высококачественная мука для хлебопекарного производства</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+
+      <!-- Маргарин столовый -->
+      <div class="product-item" onclick="openModal('margarine')">
+        <img src="img/margrin.png" alt="Маргарин столовый">
+        <span class="product-badge">НОВИНКА</span>
+        <h3>Маргарин столовый</h3>
+        <p>Качественный маргарин для пищевой промышленности</p>
+        <button class="btn-details">Подробнее</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Модальное окно для списка товаров -->
+<div class="modal-overlay" id="product-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h2 class="modal-title" id="modal-title">Список товаров</h2>
+    <div class="modal-product-list" id="modal-product-list">
+      <!-- Товары будут добавляться с помощью JavaScript -->
+    </div>
+  </div>
+</div>
+
+<!-- Stats Section -->
+
+
+<!-- Production Section -->
+<section class="production">
+  <div class="container">
+    <img src>
+    <h2 class="section-title">Наша компания производит линейку профессиональной продукции под собственной торговой маркой  для сектора HoReCa</h2>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <h2 class="section-title" style="text-align: center;">Тут можно что то про HoReCa</h2>
+    
+  </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <span class="dot"></span>
+      <span class="section-label">ОТЗЫВЫ КЛИЕНТОВ</span>
+      <h2>Нам доверяют</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>Отличное качество масла</h4>
+        <p>Работаем с Донской Кухней уже 5 лет. Масло всегда высокого качества, без примесей. Клиенты довольны, возвратов не было ни разу.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">АП</div>
+          <div class="reviewer-info">
+            <h5>Алексей Петров</h5>
+            <p>Директор, ООО "Южный Хлеб"</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>Надёжный поставщик</h4>
+        <p>Ценим оперативность и индивидуальный подход. Всегда идут навстречу, помогают с логистикой. Рекомендуем как надёжного партнёра.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background: #5c6bc0;">МС</div>
+          <div class="reviewer-info">
+            <h5>Марина Соколова</h5>
+            <p>Закупщик, "Кондитер Плюс"</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>Выгодные условия</h4>
+        <p>Отличное соотношение цены и качества. Гибкая система скидок для постоянных клиентов. Доставка всегда вовремя, документы в порядке.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background: #26a69a;">ИК</div>
+          <div class="reviewer-info">
+            <h5>Игорь Кузнецов</h5>
+            <p>Владелец, Пекарня "Колос"</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>Профессиональный подход</h4>
+        <p>Сотрудничаем более 3 лет. Всегда помогают с подбором продукции, консультируют по применению. Качество стабильное, цены конкурентные.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background: #7cb342;">ЕВ</div>
+          <div class="reviewer-info">
+            <h5>Елена Волкова</h5>
+            <p>Технолог, "Донской Кондитер"</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>Широкий ассортимент</h4>
+        <p>Удобно заказывать всё необходимое у одного поставщика. Большой выбор фасовок, всегда есть в наличии. Менеджеры отзывчивые и компетентные.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background: #42a5f5;">ДН</div>
+          <div class="reviewer-info">
+            <h5>Дмитрий Новиков</h5>
+            <p>Снабженец, ИП Новиков</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>Стабильность поставок</h4>
+        <p>За 7 лет работы не было ни одного срыва поставок. Всегда предупреждают о возможных задержках заранее. Это очень важно для нашего производства.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background: #4a7c59;">ОЛ</div>
+          <div class="reviewer-info">
+            <h5>Ольга Лебедева</h5>
+            <p>Директор, "Хлебный Дом"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <h2>начните сотрудничество сегодня</h2>
+  <a href="#contacts" class="btn-cta">
+    Получить прайс-лист
+    <span class="arrow"><i class="ri-arrow-right-line"></i></span>
+  </a>
+  <p>Свяжитесь с нами для обсуждения условий поставки и получения специального предложения</p>
+</section>
+
+<!-- Contacts Section -->
+<section class="contacts" id="contacts">
+  <div class="container">
+    <h2>Контакты</h2>
+    <p>Свяжитесь с нами удобным способом</p>
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="ri-phone-line"></i>
+      </div>
+      <h4>Телефон</h4>
+      <p>+7 (977) 807-95-29</p>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="ri-mail-line"></i>
+      </div>
+      <h4>Email</h4>
+      <p>sozvezdie-zakaz@bk.ru</p>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="ri-map-pin-line"></i>
+      </div>
+      <h4>Адрес</h4>
+      <p>г. Москва</p>
+      <p>ул.Ратная, д.16, корп.2, подвал, пом.1, комн.12</p>
+      <div id="map"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Form Section -->
+<section class="form-section">
+  <div class="container">
+    <div class="form-card">
+      <h3>Оставьте заявку</h3>
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Ваше имя">
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Телефон">
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Сообщение"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">ДК</div>
+      <div class="footer-brand">
+        <h4>Донская Кухня</h4>
+        <p>Производство качественного сырья с 1993 года</p>
+      </div>
+    </div>
+    <div class="footer-sections">
+      <div class="footer-section">
+        <h5>Продукция</h5>
+        <ul>
+          <li><a href="#">Масложировая</a></li>
+          <li><a href="#">Бакалейная</a></li>
+          <li><a href="#">Кондитерская</a></li>
+          <li><a href="#">Хлебопекарная</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h5>Компания</h5>
+        <ul>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Производство</a></li>
+          <li><a href="#">Сертификаты</a></li>
+          <li><a href="#">Вакансии</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h5>Поддержка</h5>
+        <ul>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Оплата</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <h4>© Донская Кухня 2026</h4>
+      <p>Все права защищены</p>
+      <div class="social-links">
+        <a href="#">VK</a>
+        <a href="#">Telegram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+    <div class="newsletter">
+      <h4>Качество, проверенное временем</h4>
+      <p>Подпишитесь на рассылку и получайте актуальные предложения</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Ваш email">
+        <button><i class="ri-arrow-right-line"></i></button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Intersection Observer for scroll animations
+document.addEventListener('DOMContentLoaded', function() {
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe sections
+  document.querySelectorAll('.why-us, .products, .stats, .production, .gallery, .reviews, .cta-section, .contacts, .form-section, footer').forEach(section => {
+    observer.observe(section);
+  });
+
+  // Observe individual cards and items
+  document.querySelectorAll('.feature-card, .product-item, .product-item-light, .stat-item, .production img, .production-card, .gallery-item, .review-card, .contact-item, .form-card, .newsletter img').forEach(item => {
+    observer.observe(item);
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 100, // Учитываем высоту хедера
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Add rotation values for product cards
+  document.querySelectorAll('.product-card').forEach((card, index) => {
+    const rotations = ['-2deg', '1deg', '-1deg'];
+    card.style.setProperty('--rotate', rotations[index] || '0deg');
+  });
+});
+
+// Скрипт для изменения цвета хедера при прокрутке
+window.addEventListener('scroll', function() {
+  const header = document.getElementById('main-header');
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Данные для модального окна
+const productData = {
+  'flour': {
+    title: 'Мука пшеничная высший сорт - Ассортимент',
+    products: [
+      {
+        name: 'Сгущенка вареная с сахаром',
+        specs: 'Вкусная вареная сгущенка с натуральным сахаром',
+        img: 'img/1.png'
+      },
+      {
+        name: 'Цельное сгущенное молоко с сахаром',
+        specs: 'Жирность 8,5% ГОСТ. Натуральное цельное молоко',
+        img: 'img/2.png'
+      },
+      {
+        name: 'Молоко сгущенное с сахаром',
+        specs: 'Жирность 0,2% ТУ. Диетический вариант',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Молоко 3,2%',
+        specs: 'ГОСТ. Натуральное пастеризованное молоко',
+        img: 'img/4.png'
+      }
+    ]
+  },
+  'maslo': {
+    title: 'Масложировая продукция - Ассортимент',
+    products: [
+      {
+        name: 'Подсолнечное масло рафинированное',
+        specs: 'Высший сорт, идеально для жарки',
+        img: 'img/1.png'
+      },
+      {
+        name: 'Подсолнечное масло нерафинированное',
+        specs: 'Натуральное, с сохранением всех полезных свойств',
+        img: 'img/2.png'
+      },
+      {
+        name: 'Маргарин столовый',
+        specs: 'Для выпечки и кулинарии',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Маргарин для производства',
+        specs: 'Промышленный, для пищевой промышленности',
+        img: 'img/4.png'
+      }
+    ]
+  },
+  'test': {
+    title: 'Масложировая продукция - Ассортимент',
+    products: [
+      {
+        name: 'Подсолнечное масло рафинированное',
+        specs: 'Высший сорт, идеально для жарки',
+        img: 'img/1.png'
+      },
+      {
+        name: 'Подсолнечное масло нерафинированное',
+        specs: 'Натуральное, с сохранением всех полезных свойств',
+        img: 'img/2.png'
+      },
+      {
+        name: 'Маргарин столовый',
+        specs: 'Для выпечки и кулинарии',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Маргарин столовый',
+        specs: 'Для выпечки и кулинарии',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Маргарин столовый',
+        specs: 'Для выпечки и кулинарии',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Маргарин столовый',
+        specs: 'Для выпечки и кулинарии',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Маргарин столовый',
+        specs: 'Для выпечки и кулинарии',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Маргарин столовый',
+        specs: 'Для выпечки и кулинарии',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Маргарин для производства',
+        specs: 'Промышленный, для пищевой промышленности',
+        img: 'img/4.png'
+      }
+    ]
+  },
+  'margarine': {
+    title: 'Маргарин столовый - Ассортимент',
+    products: [
+      {
+        name: 'Маргарин столовый классический',
+        specs: 'Традиционный рецепт, для ежедневного использования',
+        img: 'img/1.png'
+      },
+      {
+        name: 'Маргарин для выпечки',
+        specs: 'Специальная рецептура для кондитерских изделий',
+        img: 'img/2.png'
+      },
+      {
+        name: 'Маргарин сливочный',
+        specs: 'С добавлением сливочного масла, нежный вкус',
+        img: 'img/3.png'
+      },
+      {
+        name: 'Маргарин диетический',
+        specs: 'Пониженное содержание жира, для здорового питания',
+        img: 'img/4.png'
+      }
+    ]
+  }
+};
+
+// Функция открытия модального окна
+function openModal(productType) {
+  const modal = document.getElementById('product-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const productList = document.getElementById('modal-product-list');
+  
+  // Очищаем список
+  productList.innerHTML = '';
+  
+  // Устанавливаем заголовок
+  modalTitle.textContent = productData[productType].title;
+  
+  // Добавляем товары
+  productData[productType].products.forEach(product => {
+    const productItem = document.createElement('div');
+    productItem.className = 'modal-product-item';
+    productItem.innerHTML = `
+      <img src="${product.img}" alt="${product.name}" class="modal-product-img">
+      <div class="modal-product-info">
+        <div class="modal-product-name">${product.name}</div>
+        <div class="modal-product-specs">${product.specs}</div>
+      </div>
+    `;
+    productList.appendChild(productItem);
+  });
+  
+  // Показываем модальное окно
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Блокируем прокрутку страницы
+}
+
+// Функция закрытия модального окна
+function closeModal() {
+  const modal = document.getElementById('product-modal');
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto'; // Восстанавливаем прокрутку страницы
+}
+
+// Закрытие модального окна при клике на overlay
+document.getElementById('product-modal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+
+// Закрытие модального окна при нажатии Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
+
+// Предотвращаем всплытие события при клике на кнопку внутри карточки
+document.querySelectorAll('.product-item .btn-details').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.stopPropagation(); // Останавливаем всплытие события
+  });
+});
+
+// То же самое для кнопок в светлых карточках
+document.querySelectorAll('.product-item-light .btn-order').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+});
+</script>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=ajeve5ol9ihhicjqef17"></script>
+<script>
+ymaps.ready(function() {
+    var map = new ymaps.Map("map", {
+        center: [55.576737, 37.570249],
+        zoom: 17
+    });
+    
+    var placemark = new ymaps.Placemark([55.576737, 37.570249], {
+        balloonContent: 'Москва, ул. Ратная, д.16, корп.2<br>Подвал, пом.1, комн. 12'
+    });
+    
+    map.geoObjects.add(placemark);
+    placemark.balloon.open();
+});
+</script>
+
+</body>
+</html>
