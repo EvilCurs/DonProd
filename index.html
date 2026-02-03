@@ -69,17 +69,18 @@ header.scrolled nav a:hover {
   gap: 10px;
 }
 .logo-img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: #c41e3a;
+  width: 90px;
+  height: 72px;
+
+  background: 
+    url('img/лого.png') center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
-  animation: pulse 2s infinite;
+  animation: pulse 10s infinite;
 }
 .logo-text {
   color: #fff;
@@ -119,7 +120,7 @@ body {
   color: #fff;
   position: relative;
   animation: fadeIn 1.2s ease-out;
-  margin-top: -70px; /* Компенсируем отступ body */
+  margin-top: 32px; /* Компенсируем отступ body */
 }
 .hero::before {
   content: '';
@@ -182,8 +183,8 @@ body {
   box-shadow: 0 15px 50px rgba(0,0,0,0.25);
 }
 .product-card img {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   object-fit: contain;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
@@ -345,11 +346,11 @@ body {
 
 /* Обновленные стили для карточек товаров */
 .product-item {
-  background: linear-gradient(135deg, #d4a574 0%, #c4956a 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ecc199 100%);
   border-radius: 16px;
   padding: 20px 15px;
   margin-bottom: 20px;
-  color: #fff;
+  color: black;
   text-align: center;
   flex: 1;
   min-width: 0;
@@ -502,14 +503,14 @@ body {
 .product-badge {
   background: #e8f5e9;
   color: #2e7d32;
-  padding: 5px 12px;
+  padding: 3px 10px;
   border-radius: 16px;
   font-size: 11px;
   font-weight: 500;
   display: inline-block;
   margin-bottom: 12px;
-  animation: pulseBadge 2s infinite alternate;
-  transition: all 0.3s ease;
+  
+
 }
 .product-badge:nth-child(2) {
   background: #e3f2fd;
@@ -567,7 +568,7 @@ body {
 
 /* Эффект для бейджей при наведении */
 .product-item:hover .product-badge {
-  animation: pulseBadge 1s infinite alternate;
+  animation: pulseBadge 3.5s infinite alternate;
   transform: scale(1.05);
 }
 
@@ -1187,16 +1188,17 @@ footer.visible {
   border-bottom: 1px solid #333;
 }
 .footer-logo {
-  width: 45px;
-  height: 45px;
-  background: #c41e3a;
+  width: 80px;
+  height: 65px;
+  background: 
+    url('img/лого.png') center/cover;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 11px;
   font-weight: bold;
-  animation: pulse 2s infinite;
+  animation: pulse 10s infinite;
 }
 .footer-brand h4 {
   font-size: 16px;
@@ -1499,7 +1501,7 @@ footer.visible {
   <div class="container">
     <div class="header-content">
       <div class="logo">
-        <div class="logo-img">ДК</div>
+        <div class="logo-img"></div>
         <div class="logo-text">Донская<br>Кухня</div>
       </div>
       <nav>
@@ -1520,17 +1522,17 @@ footer.visible {
     <p>Качественное сырьё для вашего производства с 1993 года</p>
     <div class="hero-cards">
       <div class="product-card">
-        <img src>
+        <img src="img/maslo.png">
         <h3>Масложировая продукция</h3>
         <p>Подсолнечное масло, маргарин</p>
       </div>
       <div class="product-card">
-        <img src>
+        <img src="img/РЫБА_ЖБ_КИЛЬКА В ТОМАТЕ.jpg">
         <h3>Бакалейная группа</h3>
         <p>Крупы, макаронные изделия</p>
       </div>
       <div class="product-card">
-        <img src>
+        <img src="img/myka.png">
         <h3>Кондитерское сырьё</h3>
         <p>Мука, сахар, добавки</p>
       </div>
@@ -1593,85 +1595,38 @@ footer.visible {
     
     <div class="products-grid">
       <!-- Масложировая продукция -->
-      <div class="product-item" onclick="openModal('maslo')">
+      <div class="product-item" onclick="openModal('flour')">
         <img src="img/maslo.png" alt="Масложировая продукция">
-        <h3>Масложировая продукция test git</h3>
+        <h3>Масложировая продукция</h3>
         <p>Подсолнечное масло рафинированное и нерафинированное</p>
         <button class="btn-details">Подробнее <i class="ri-arrow-right-line"></i></button>
       </div>
       
       <!-- Мука пшеничная высший сорт -->
-      <div class="product-item" onclick="openModal('flour')">
-        <img src="img/myka.png" alt="Мука пшеничная высший сорт">
+      <div class="product-item" onclick="openModal('maslo')">
+        <img src="img/ov6-p-500.webp" alt="Овощная консервация">
         <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Мука пшеничная высший сорт</h3>
-        <p>Высококачественная мука для хлебопекарного производства</p>
+        <h3>Овощная консервация</h3>
+        <p>Текст</p>
         <button class="btn-details">Подробнее</button>
       </div>
 
       <!-- Test карточка -->
       <div class="product-item" onclick="openModal('test')">
-        <img src="img/myka.png" alt="Test продукт">
+        <img src="img/golovka.png" alt="Сыры">
         <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Test</h3>
-        <p>Высококачественная мука для хлебопекарного производства</p>
+        <h3>Сыры</h3>
+        <p>Высококачественный сыр</p>
         <button class="btn-details">Подробнее</button>
       </div>
 
-      <div class="product-item" onclick="openModal('test')">
-        <img src="img/myka.png" alt="Test продукт">
-        <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Test</h3>
-        <p>Высококачественная мука для хлебопекарного производства</p>
-        <button class="btn-details">Подробнее</button>
-      </div>
-
-      <div class="product-item" onclick="openModal('test')">
-        <img src="img/myka.png" alt="Test продукт">
-        <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Test</h3>
-        <p>Высококачественная мука для хлебопекарного производства</p>
-        <button class="btn-details">Подробнее</button>
-      </div>
-
-      <div class="product-item" onclick="openModal('test')">
-        <img src="img/myka.png" alt="Test продукт">
-        <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Test</h3>
-        <p>Высококачественная мука для хлебопекарного производства</p>
-        <button class="btn-details">Подробнее</button>
-      </div>
-
-      <div class="product-item" onclick="openModal('test')">
-        <img src="img/myka.png" alt="Test продукт">
-        <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Test</h3>
-        <p>Высококачественная мука для хлебопекарного производства</p>
-        <button class="btn-details">Подробнее</button>
-      </div>
-
-      <div class="product-item" onclick="openModal('test')">
-        <img src="img/myka.png" alt="Test продукт">
-        <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Test</h3>
-        <p>Высококачественная мука для хлебопекарного производства</p>
-        <button class="btn-details">Подробнее</button>
-      </div>
-
-      <div class="product-item" onclick="openModal('test')">
-        <img src="img/myka.png" alt="Test продукт">
-        <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Test</h3>
-        <p>Высококачественная мука для хлебопекарного производства</p>
-        <button class="btn-details">Подробнее</button>
-      </div>
 
       <!-- Маргарин столовый -->
       <div class="product-item" onclick="openModal('margarine')">
-        <img src="img/margrin.png" alt="Маргарин столовый">
+        <img src="img/m5-p-500.webp" alt="Майонез">
         <span class="product-badge">НОВИНКА</span>
-        <h3>Маргарин столовый</h3>
-        <p>Качественный маргарин для пищевой промышленности</p>
+        <h3>Майонез</h3>
+        <p>Текст</p>
         <button class="btn-details">Подробнее</button>
       </div>
     </div>
@@ -1703,7 +1658,7 @@ footer.visible {
 <!-- Gallery Section -->
 <section class="gallery" id="gallery">
   <div class="container">
-    <h2 class="section-title" style="text-align: center;">Тут можно что то про HoReCa</h2>
+    <h2 class="section-title" style="text-align: center; font-size: 24px;">НАДЁЖНЫЙ ПОСТАВЩИК ДЛЯ РЕСТОРАНОВ, КАФЕ И ОТЕЛЕЙ<p>30 лет обеспечиваем стабильное качество для HoReCa-сегмента</p></h2>
     
   </div>
 </section>
@@ -1862,7 +1817,7 @@ footer.visible {
 <footer>
   <div class="container">
     <div class="footer-top">
-      <div class="footer-logo">ДК</div>
+      <div class="footer-logo"></div>
       <div class="footer-brand">
         <h4>Донская Кухня</h4>
         <p>Производство качественного сырья с 1993 года</p>
@@ -1981,12 +1936,12 @@ window.addEventListener('scroll', function() {
 // Данные для модального окна
 const productData = {
   'flour': {
-    title: 'Мука пшеничная высший сорт - Ассортимент',
+    title: 'Масложировая продукция - Ассортимент',
     products: [
       {
         name: 'Сгущенка вареная с сахаром',
         specs: 'Вкусная вареная сгущенка с натуральным сахаром',
-        img: 'img/1.png'
+        img: 'img/maslo1.webp'
       },
       {
         name: 'Цельное сгущенное молоко с сахаром',
@@ -2006,12 +1961,12 @@ const productData = {
     ]
   },
   'maslo': {
-    title: 'Масложировая продукция - Ассортимент',
+    title: 'Овощная консервация - Ассортимент',
     products: [
       {
-        name: 'Подсолнечное масло рафинированное',
+        name: 'Икра из кабачков',
         specs: 'Высший сорт, идеально для жарки',
-        img: 'img/1.png'
+        img: 'img/ov6-p-500.webp'
       },
       {
         name: 'Подсолнечное масло нерафинированное',
@@ -2081,12 +2036,12 @@ const productData = {
     ]
   },
   'margarine': {
-    title: 'Маргарин столовый - Ассортимент',
+    title: 'Майонез - Ассортимент',
     products: [
       {
-        name: 'Маргарин столовый классический',
+        name: 'Майонез',
         specs: 'Традиционный рецепт, для ежедневного использования',
-        img: 'img/1.png'
+        img: 'img/m5-p-500.webp'
       },
       {
         name: 'Маргарин для выпечки',
@@ -2178,12 +2133,12 @@ document.querySelectorAll('.product-item-light .btn-order').forEach(button => {
 <script>
 ymaps.ready(function() {
     var map = new ymaps.Map("map", {
-        center: [55.576737, 37.570249],
+        center: [55.812135, 37.964960],
         zoom: 17
     });
     
-    var placemark = new ymaps.Placemark([55.576737, 37.570249], {
-        balloonContent: 'Москва, ул. Ратная, д.16, корп.2<br>Подвал, пом.1, комн. 12'
+    var placemark = new ymaps.Placemark([55.812135, 37.964960], {
+        balloonContent: 'МО Балашиха ул. Текстильщиков дом 2'
     });
     
     map.geoObjects.add(placemark);
