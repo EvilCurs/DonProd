@@ -22,7 +22,8 @@ body {
   overflow-x: hidden;
 }
 .container {
-  max-width: 420px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -90,10 +91,22 @@ header.scrolled nav a:hover {
   line-height: 1.2;
   transition: color 0.4s ease;
 }
+
+/* Мобильная навигация */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   gap: 15px;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
@@ -112,10 +125,10 @@ body {
   padding-top: 70px;
 }
 
-/* ===== УЛУЧШЕННЫЙ HERO SECTION ===== */
+/* ===== ОПТИМИЗИРОВАННЫЙ HERO SECTION ===== */
 .hero {
   background: url('img/ART_FON.png') no-repeat center center;
-  background-size: 125%;
+  background-size: cover;
   background-position: center;
   padding: 40px 0 60px;
   text-align: center;
@@ -137,9 +150,9 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, 
-    rgba(196, 196, 196, 0.5) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.3) 100%);
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.5) 100%);
   z-index: 1;
 }
 
@@ -150,7 +163,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .hero-content {
@@ -189,7 +202,7 @@ body {
   margin: 0 auto 30px;
   max-width: 500px;
   animation: slideInUp 1.2s ease-out;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   padding: 20px;
   border-radius: 12px;
   backdrop-filter: blur(5px);
@@ -338,55 +351,7 @@ body {
   transform: translateX(5px);
 }
 
-/* Scroll indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  animation: fadeIn 2s ease-out;
-  z-index: 2;
-}
-
-.mouse {
-  width: 26px;
-  height: 40px;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 13px;
-  position: relative;
-}
-
-.wheel {
-  width: 4px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: scrollWheel 2s infinite;
-}
-
-@keyframes scrollWheel {
-  0% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(15px);
-  }
-}
-
-/* ===== ОСТАЛЬНЫЕ СТИЛИ (без изменений) ===== */
-/* Why Us Section */
+/* ===== ОСТАЛЬНЫЕ СТИЛИ ===== */
 .why-us {
   background: #f6f5f1;
   padding: 60px 0;
@@ -453,7 +418,7 @@ body {
   line-height: 1.7;
 }
 
-/* Обновленная Products Section */
+/* Products Section */
 .products {
   padding: 80px 0;
   background: linear-gradient(180deg, #fff 0%, #f9f9f9 100%);
@@ -863,7 +828,7 @@ body {
   font-weight: 600;
 }
 
-/* Обновленная Production Section */
+/* Production Section */
 .production {
   padding: 80px 0;
   background: linear-gradient(180deg, #f9f7f2 0%, #ffffff 100%);
@@ -1145,7 +1110,7 @@ body {
 }
 .gallery-item img {
   width: 100%;
-  height: 2000px;
+  height: 300px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -1419,89 +1384,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Адаптация для десктопа */
-@media (min-width: 768px) {
-  .contacts-row {
-    flex-direction: row;
-    gap: 40px;
-  }
-  
-  .contacts h2 {
-    font-size: 42px;
-  }
-  
-  .contacts > p {
-    font-size: 20px;
-    margin-bottom: 60px;
-  }
-  
-  .contacts-row .contact-item {
-    padding: 0 15px;
-  }
-  
-  .contacts-row .contact-icon {
-    width: 80px;
-    height: 80px;
-    font-size: 32px;
-    margin-bottom: 25px;
-  }
-  
-  .contacts-row .contact-item h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  
-  .contacts-row .contact-item p {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .contacts-row {
-    gap: 60px;
-  }
-  
-  .contacts-row .contact-item {
-    padding: 0 25px;
-  }
-}
-
-/* Адаптация для мобильных */
-@media (max-width: 767px) {
-  .contacts {
-    padding: 60px 0;
-  }
-  
-  .contacts h2 {
-    font-size: 32px;
-  }
-  
-  .contacts > p {
-    font-size: 16px;
-    margin-bottom: 40px;
-  }
-  
-  .contacts-row .contact-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  .contacts-row .contact-item h4 {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
-  
-  .contacts-row .contact-item p {
-    font-size: 14px;
-  }
-  
-  #map {
-    height: 300px;
-    margin: 20px 0;
-  }
-}
 /* Form Section */
 .form-section {
   background: #fff;
@@ -1839,13 +1721,226 @@ footer.visible {
   }
 }
 
-/* Desktop styles */
-@media (min-width: 768px) {
-  .container {
-    max-width: 1200px;
+/* ===== МЕДИА ЗАПРОСЫ ===== */
+
+/* Для мобильных устройств */
+@media (max-width: 767px) {
+  .hero {
+    padding: 30px 0 50px;
+    min-height: calc(100vh - 70px);
   }
   
-  /* Hero адаптация для десктопа */
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-tagline {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-description {
+    font-size: 14px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-cards {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 15px;
+  }
+  
+  .product-card {
+    padding: 15px;
+  }
+  
+  .product-card img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .cta-buttons {
+    max-width: 300px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+  
+  /* Мобильная навигация */
+  .nav-toggle {
+    display: block;
+  }
+  
+  nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  nav a {
+    color: #1a1a1a;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav a:last-child {
+    border-bottom: none;
+  }
+  
+  header.scrolled nav a {
+    color: #1a1a1a;
+  }
+  
+  /* Products section */
+  .products {
+    padding: 60px 0;
+  }
+  
+  .products h2.section-title {
+    font-size: 32px;
+  }
+  
+  .products-intro {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .product-item {
+    padding: 20px;
+  }
+  
+  .product-item img {
+    height: 180px;
+  }
+  
+  .product-item h3 {
+    font-size: 18px;
+  }
+  
+  /* Production section */
+  .production {
+    padding: 60px 0;
+  }
+  
+  .fan-images {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+  
+  .fan-image {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    transform: none !important;
+  }
+  
+  .image-overlay {
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .horeca-advantages h3 {
+    font-size: 28px;
+  }
+  
+  .advantage-card {
+    padding: 20px;
+  }
+  
+  /* Gallery */
+  .gallery-item img {
+    height: 200px;
+  }
+  
+  .gallery-row img {
+    height: 120px;
+  }
+  
+  /* Reviews */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Contacts */
+  .contacts {
+    padding: 60px 0;
+  }
+  
+  .contacts h2 {
+    font-size: 32px;
+  }
+  
+  .contacts > p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .contacts-row .contact-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .contacts-row .contact-item h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .contacts-row .contact-item p {
+    font-size: 14px;
+  }
+  
+  #map {
+    height: 300px;
+    margin: 20px 0;
+  }
+  
+  /* Модальное окно на мобильных */
+  .modal {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .modal-product-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .modal-product-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
   .hero {
     min-height: 90vh;
     padding: 60px 0 80px;
@@ -2000,104 +2095,10 @@ footer.visible {
   }
 }
 
-/* Для мобильных устройств */
-@media (max-width: 767px) {
-  .hero {
-    padding: 30px 0 50px;
-    min-height: auto;
-  }
-  
-  .hero h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-  }
-  
-  .hero-tagline {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-description {
-    font-size: 14px;
-    padding: 15px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-cards {
-    grid-template-columns: 1fr;
-    max-width: 300px;
-  }
-  
-  .product-card img {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .products {
-    padding: 60px 0;
-  }
-  
-  .products h2.section-title {
-    font-size: 32px;
-  }
-  
-  .products-intro {
-    font-size: 16px;
-    margin-bottom: 40px;
-  }
-  
-  .product-item {
-    padding: 20px;
-  }
-  
-  .product-item img {
-    height: 180px;
-  }
-  
-  .product-item h3 {
-    font-size: 18px;
-  }
-  
-  /* Production адаптация для мобильных */
-  .production {
-    padding: 60px 0;
-  }
-  
-  .fan-images {
-    flex-direction: column;
-    height: auto;
-    gap: 20px;
-  }
-  
-  .fan-image {
-    width: 100%;
-    max-width: 300px;
-    height: 250px;
-    transform: none !important;
-  }
-  
-  .image-overlay {
-    transform: translateY(0);
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  .horeca-advantages h3 {
-    font-size: 28px;
-  }
-  
-  .advantage-card {
-    padding: 20px;
-  }
-  
-  .scroll-indicator {
-    display: none; /* Скрываем на мобильных для экономии места */
-  }
-}
-
 /* Для очень маленьких экранов */
 @media (max-width: 360px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
   
   .hero-tagline {
@@ -2110,11 +2111,16 @@ footer.visible {
   }
   
   .product-card {
-    padding: 15px;
+    padding: 12px;
   }
   
   .product-card h3 {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  
+  .product-card img {
+    width: 100px;
+    height: 100px;
   }
   
   .advantage-card {
@@ -2133,7 +2139,10 @@ footer.visible {
         <div class="logo-img"></div>
         <div class="logo-text">Донская<br>Кухня</div>
       </div>
-      <nav>
+      <button class="nav-toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </button>
+      <nav id="main-nav">
         <a href="#home">Главная</a>
         <a href="#about">О компании</a>
         <a href="#products">Продукция</a>
@@ -2313,15 +2322,6 @@ footer.visible {
   </div>
 </div>
 
-<!-- Stats Section -->
-<section class="stats">
-  <div class="container">
-    <h2>Наша статистика</h2>
-    <div class="stat-item"><span>30+ лет</span> на рынке</div>
-    <div class="stat-item"><span>1000+</span> довольных клиентов</div>
-    <div class="stat-item"><span>50+</span> видов продукции</div>
-  </div>
-</section>
 
 <!-- Production Section -->
 <section class="production" id="production">
@@ -2705,23 +2705,6 @@ document.addEventListener('DOMContentLoaded', function() {
   advantageCards.forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.1}s`;
   });
-
-  // Эффект параллакса для изображений при наведении
-  productItems.forEach(item => {
-    const img = item.querySelector('img');
-    
-    item.addEventListener('mousemove', (e) => {
-      const { left, top, width, height } = item.getBoundingClientRect();
-      const x = (e.clientX - left) / width - 0.5;
-      const y = (e.clientY - top) / height - 0.5;
-      
-      img.style.transform = `scale(1.05) rotate(${x * 5}deg) translate(${x * 10}px, ${y * 10}px)`;
-    });
-    
-    item.addEventListener('mouseleave', () => {
-      img.style.transform = 'scale(1) rotate(0) translate(0, 0)';
-    });
-  });
 });
 
 // Скрипт для изменения цвета хедера при прокрутке
@@ -2734,6 +2717,25 @@ window.addEventListener('scroll', function() {
   } else {
     header.classList.remove('scrolled');
   }
+});
+
+// Мобильное меню
+const navToggle = document.getElementById('nav-toggle');
+const mainNav = document.getElementById('main-nav');
+
+navToggle.addEventListener('click', function() {
+  mainNav.classList.toggle('active');
+  this.innerHTML = mainNav.classList.contains('active') 
+    ? '<i class="ri-close-line"></i>' 
+    : '<i class="ri-menu-line"></i>';
+});
+
+// Закрытие меню при клике на ссылку
+document.querySelectorAll('#main-nav a').forEach(link => {
+  link.addEventListener('click', function() {
+    mainNav.classList.remove('active');
+    navToggle.innerHTML = '<i class="ri-menu-line"></i>';
+  });
 });
 
 // Данные для модального окна
@@ -2976,14 +2978,6 @@ document.addEventListener('keydown', function(e) {
 document.querySelectorAll('.product-item .btn-details').forEach(button => {
   button.addEventListener('click', function(e) {
     e.stopPropagation();
-  });
-});
-
-// Плавный скролл для индикатора прокрутки
-document.querySelector('.scroll-indicator').addEventListener('click', function() {
-  window.scrollTo({
-    top: window.innerHeight,
-    behavior: 'smooth'
   });
 });
 </script>
