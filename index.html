@@ -42,8 +42,6 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
 header.scrolled .logo-text {
   color: #fff;
 }
@@ -1811,7 +1809,7 @@ footer.visible {
     color: #1a1a1a;
   }
   
-  /* Products section */
+  /* Products section - 2 карточки в строку на мобильных */
   .products {
     padding: 60px 0;
   }
@@ -1825,16 +1823,45 @@ footer.visible {
     margin-bottom: 40px;
   }
   
+  /* ОСНОВНОЕ ИЗМЕНЕНИЕ: 2 карточки в строку на мобильных */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
   .product-item {
-    padding: 20px;
+    padding: 15px;
+    height: auto;
+    min-height: 280px;
   }
   
   .product-item img {
-    height: 180px;
+    height: 120px;
+    margin-bottom: 10px;
   }
   
   .product-item h3 {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .product-item > p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .product-badge {
+    font-size: 9px;
+    padding: 4px 8px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .btn-details {
+    padding: 10px 15px;
+    font-size: 12px;
+    border-radius: 10px;
   }
   
   /* Production section */
@@ -1936,7 +1963,7 @@ footer.visible {
   }
 }
 
-/* Desktop styles */
+/* Для планшетов (от 768px) */
 @media (min-width: 768px) {
   .hero {
     min-height: 90vh;
@@ -1994,10 +2021,10 @@ footer.visible {
     gap: 20px;
   }
   
-  /* Продуктовые карточки - 4 в строке на десктопе */
+  /* Продуктовые карточки - 3 в строке на планшетах */
   .products-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
   
   .products h2.section-title {
@@ -2009,18 +2036,19 @@ footer.visible {
   }
   
   .product-item {
-    padding: 30px;
+    padding: 25px;
+    min-height: 320px;
   }
   
   .product-item img {
-    height: 220px;
+    height: 180px;
   }
   
   .product-item h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
   
-  /* Production адаптация для десктопа */
+  /* Production адаптация для планшетов */
   .advantages-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2054,7 +2082,7 @@ footer.visible {
     gap: 30px;
   }
   
-  /* Модальное окно на десктопе */
+  /* Модальное окно на планшетах */
   .modal {
     max-width: 850px;
   }
@@ -2064,6 +2092,7 @@ footer.visible {
   }
 }
 
+/* Для планшетов в горизонтальной ориентации (от 1024px) */
 @media (min-width: 1024px) {
   .hero h1 {
     font-size: 56px;
@@ -2073,6 +2102,7 @@ footer.visible {
     font-size: 24px;
   }
   
+  /* Продуктовые карточки - 4 в строке на десктопе */
   .products-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
@@ -2089,6 +2119,37 @@ footer.visible {
   .fan-image {
     width: 350px;
     height: 350px;
+  }
+}
+
+/* Для маленьких мобильных (меньше 480px) */
+@media (max-width: 480px) {
+  /* Еще более компактные карточки на очень маленьких экранах */
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .product-item {
+    padding: 12px;
+    min-height: 260px;
+  }
+  
+  .product-item img {
+    height: 100px;
+  }
+  
+  .product-item h3 {
+    font-size: 15px;
+  }
+  
+  .product-item > p {
+    font-size: 11px;
+  }
+  
+  .btn-details {
+    padding: 8px 12px;
+    font-size: 11px;
   }
 }
 
@@ -2122,6 +2183,24 @@ footer.visible {
   
   .advantage-card {
     padding: 15px;
+  }
+  
+  /* Карточки товаров для очень маленьких экранов */
+  .products-grid {
+    gap: 10px;
+  }
+  
+  .product-item {
+    padding: 10px;
+    min-height: 240px;
+  }
+  
+  .product-item img {
+    height: 90px;
+  }
+  
+  .product-item h3 {
+    font-size: 14px;
   }
 }
 </style>
