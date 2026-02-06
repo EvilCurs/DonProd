@@ -42,6 +42,8 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+
+
 header.scrolled .logo-text {
   color: #fff;
 }
@@ -1809,7 +1811,7 @@ footer.visible {
     color: #1a1a1a;
   }
   
-  /* Products section - 2 карточки в строку на мобильных */
+  /* Products section */
   .products {
     padding: 60px 0;
   }
@@ -1823,45 +1825,16 @@ footer.visible {
     margin-bottom: 40px;
   }
   
-  /* ОСНОВНОЕ ИЗМЕНЕНИЕ: 2 карточки в строку на мобильных */
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
   .product-item {
-    padding: 15px;
-    height: auto;
-    min-height: 280px;
+    padding: 20px;
   }
   
   .product-item img {
-    height: 120px;
-    margin-bottom: 10px;
+    height: 180px;
   }
   
   .product-item h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  
-  .product-item > p {
-    font-size: 12px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-  }
-  
-  .product-badge {
-    font-size: 9px;
-    padding: 4px 8px;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .btn-details {
-    padding: 10px 15px;
-    font-size: 12px;
-    border-radius: 10px;
+    font-size: 18px;
   }
   
   /* Production section */
@@ -1963,7 +1936,7 @@ footer.visible {
   }
 }
 
-/* Для планшетов (от 768px) */
+/* Desktop styles */
 @media (min-width: 768px) {
   .hero {
     min-height: 90vh;
@@ -2021,10 +1994,10 @@ footer.visible {
     gap: 20px;
   }
   
-  /* Продуктовые карточки - 3 в строке на планшетах */
+  /* Продуктовые карточки - 4 в строке на десктопе */
   .products-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
   }
   
   .products h2.section-title {
@@ -2036,19 +2009,18 @@ footer.visible {
   }
   
   .product-item {
-    padding: 25px;
-    min-height: 320px;
+    padding: 30px;
   }
   
   .product-item img {
-    height: 180px;
+    height: 220px;
   }
   
   .product-item h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
   
-  /* Production адаптация для планшетов */
+  /* Production адаптация для десктопа */
   .advantages-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2082,7 +2054,7 @@ footer.visible {
     gap: 30px;
   }
   
-  /* Модальное окно на планшетах */
+  /* Модальное окно на десктопе */
   .modal {
     max-width: 850px;
   }
@@ -2092,7 +2064,6 @@ footer.visible {
   }
 }
 
-/* Для планшетов в горизонтальной ориентации (от 1024px) */
 @media (min-width: 1024px) {
   .hero h1 {
     font-size: 56px;
@@ -2102,7 +2073,6 @@ footer.visible {
     font-size: 24px;
   }
   
-  /* Продуктовые карточки - 4 в строке на десктопе */
   .products-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
@@ -2119,37 +2089,6 @@ footer.visible {
   .fan-image {
     width: 350px;
     height: 350px;
-  }
-}
-
-/* Для маленьких мобильных (меньше 480px) */
-@media (max-width: 480px) {
-  /* Еще более компактные карточки на очень маленьких экранах */
-  .products-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .product-item {
-    padding: 12px;
-    min-height: 260px;
-  }
-  
-  .product-item img {
-    height: 100px;
-  }
-  
-  .product-item h3 {
-    font-size: 15px;
-  }
-  
-  .product-item > p {
-    font-size: 11px;
-  }
-  
-  .btn-details {
-    padding: 8px 12px;
-    font-size: 11px;
   }
 }
 
@@ -2184,24 +2123,6 @@ footer.visible {
   .advantage-card {
     padding: 15px;
   }
-  
-  /* Карточки товаров для очень маленьких экранов */
-  .products-grid {
-    gap: 10px;
-  }
-  
-  .product-item {
-    padding: 10px;
-    min-height: 240px;
-  }
-  
-  .product-item img {
-    height: 90px;
-  }
-  
-  .product-item h3 {
-    font-size: 14px;
-  }
 }
 </style>
 </head>
@@ -2235,7 +2156,9 @@ footer.visible {
   <div class="container">
     <div class="hero-content">
       <div class="hero-description">
-        Мы — ваши проводники в мире сырья. С 1993 года соединяем бизнесы с лучшими производителями и выстраиваем надёжные поставки. Наша экспертиза — ваш ресурс для создания идеального продукта.
+        Мы — больше чем дистрибьютор. Это связующее звено между ведущими производителями сырья, ингредиентов и продукции — и вашим бизнесом.
+<br>С 1993 года мы выстраиваем надежные поставки, чтобы вы могли сосредоточиться на главном: создании идеального продукта для ваших клиентов.</br>
+Наша экспертиза — ваш ресурс.
       </div>
     </div>
     
@@ -2282,24 +2205,27 @@ footer.visible {
         <p>Помимо масла, предлагаем бесплатный анализ использования фритюрных жиров в вашем заведении. Наш технолог даст рекомендации, которые помогут сэкономить и улучшить качество жарки.</p>
       </div>
       <div class="feature-card">
-        <i class="ri-truck-line feature-icon"></i>
+        <i class="ri-restaurant-line feature-icon"></i>
         <h3>Конструктор рецептуры</h3>
         <p>Поможем создать новый продукт. Подберём ингредиенты, дадим образцы и технологические карты. Сэкономим ваше время на R&D.</p>
       </div>
       <div class="feature-card">
-        <i class="ri-hand-heart-line feature-icon"></i>
+        <i class="ri-truck-line feature-icon"></i>
         <h3>Умная доставка</h3>
         <p>Мы предлагаем не просто доставку, а консолидированные поставки. Соберём ваш заказ из разных позиций — от паллет до коробок — в одну машину. Вы получаете один документ, одну приемку и экономите на логистике и времени.</p>
       </div>
       <div class="feature-card">
+        <i class="ri-eye-line feature-icon"></i>
         <h3>Трекинг качества</h3>
         <p>Каждую партию мы обеспечиваем полной документацией и прозрачностью: по запросу предоставляем фото/видео с производства, а для импорта — отслеживание коносамента.</p>
       </div>
       <div class="feature-card">
+        <i class="ri-shield-check-line feature-icon"></i>
         <h3>Гарантия стабильного качества и низких цен</h3>
         <p>Собственные производственные мощности и долгосрочные контракты с поставщиками позволяют нам предлагать лучшие цены без компромиссов в качестве.</p>
       </div>
       <div class="feature-card">
+        <i class="ri-hand-heart-line feature-icon"></i>
         <h3>Экспертиза в HoReCa</h3>
         <p>Более 15 лет работаем с ресторанами, кафе и отелями. Знаем специфику отрасли и предлагаем решения, которые действительно работают в условиях профессиональной кухни.</p>
       </div>
@@ -2319,8 +2245,8 @@ footer.visible {
       <!-- Масложировая продукция -->
       <div class="product-item" onclick="openModal('flour')">
         <img src="img/maslo.png" alt="Масложировая продукция">
-        <h3>Масложировая продукция</h3>
-        <p>Подсолнечное масло рафинированное и нерафинированное</p>
+        <h3 style="text-align: center">Масложировая продукция</h3>
+        <p style="text-align: center">Подсолнечное масло рафинированное и нерафинированное</p>
         <button class="btn-details" onclick="openModal('flour')">Подробнее <i class="ri-arrow-right-line"></i></button>
       </div>
       
@@ -2328,8 +2254,8 @@ footer.visible {
       <div class="product-item" onclick="openModal('maslo')">
         <img src="img/ov6-p-500.webp" alt="Овощная консервация">
         <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Овощная консервация</h3>
-        <p>Свежие овощи в консервированном виде для длительного хранения</p>
+        <h3 style="text-align: center;">Овощная консервация</h3>
+        <p style="text-align: center;">Свежие овощи в консервированном виде для длительного хранения</p>
         <button class="btn-details">Подробнее</button>
       </div>
 
@@ -2337,8 +2263,8 @@ footer.visible {
       <div class="product-item" onclick="openModal('test')">
         <img src="img/golovka.png" alt="Сыры">
         <span class="product-badge">ХИТ ПРОДАЖ</span>
-        <h3>Сыры</h3>
-        <p>Высококачественный сыр различных сортов и видов</p>
+        <h3 style="text-align: center">Сыр</h3>
+        <p style="text-align: center">Высококачественный сыр различных сортов и видов</p>
         <button class="btn-details">Подробнее</button>
       </div>
 
@@ -2346,24 +2272,24 @@ footer.visible {
       <div class="product-item" onclick="openModal('margarine')">
         <img src="img/m5-p-500.webp" alt="Майонез">
         <span class="product-badge">НОВИНКА</span>
-        <h3>Майонез</h3>
-        <p>Традиционный и легкий майонез для различных блюд</p>
+        <h3 style="text-align: center">Майонез</h3>
+        <p style="text-align: center">Традиционный и легкий майонез для различных блюд</p>
         <button class="btn-details">Подробнее</button>
       </div>
       
       <!-- Рыбная консервация -->
       <div class="product-item" onclick="openModal('fish')">
         <img src="img/РЫБА_ЖБ_КИЛЬКА В ТОМАТЕ.jpg" alt="Рыбная консервация">
-        <h3>Рыбная консервация</h3>
-        <p>Сайра, Килька, Сардина в различных соусах</p>
+        <h3 style="text-align: center">Рыбная консервация</h3>
+        <p style="text-align: center">Сайра, Килька, Сардина в различных соусах</p>
         <button class="btn-details">Подробнее</button>
       </div>
       
       <!-- Кондитерское сырьё -->
       <div class="product-item" onclick="openModal('confectionery')">
         <img src="img/myka.png" alt="Кондитерское сырьё">
-        <h3>Кондитерское сырьё</h3>
-        <p>Мука, сахар, добавки для кондитерского производства</p>
+        <h3 style="text-align: center">Кондитерское сырьё</h3>
+        <p style="text-align: center">Мука, сахар, добавки для кондитерского производства</p>
         <button class="btn-details">Подробнее</button>
       </div>
       
@@ -2371,16 +2297,16 @@ footer.visible {
       <div class="product-item" onclick="openModal('dairy')">
         <img src="img/МОЛОКО_1л.jpg" alt="Молочная продукция">
         <span class="product-badge">ПОПУЛЯРНОЕ</span>
-        <h3>Молочная продукция</h3>
-        <p>Молоко, сметана, творог и другие молочные продукты</p>
+        <h3 style="text-align: center">Молочная продукция</h3>
+        <p style="text-align: center">Молоко, сметана, творог и другие молочные продукты</p>
         <button class="btn-details">Подробнее</button>
       </div>
       
       <!-- Бакалея -->
       <div class="product-item" onclick="openModal('groceries')">
         <img src="https://via.placeholder.com/300x200/98FB98/FFFFFF?text=Бакалея" alt="Бакалея">
-        <h3>Бакалея</h3>
-        <p>Крупы, макароны, специи и другие бакалейные товары</p>
+        <h3 style="text-align: center">Бакалея</h3>
+        <p style="text-align: center">Крупы, макароны, специи и другие бакалейные товары</p>
         <button class="btn-details">Подробнее</button>
       </div>
     </div>
@@ -2402,8 +2328,8 @@ footer.visible {
 <!-- Production Section -->
 <section class="production" id="production">
   <div class="container">
-    <p class="section-label" style="text-align: center;">ПРОИЗВОДСТВО</p>
-    <h2 class="section-title" style="text-align: center;">Наша компания производит линейку профессиональной продукции под собственной торговой маркой для сектора HoReCa</h2>
+    <p class="section-label" style="text-align: center;">HoReCa</p>
+    <h2 class="section-title" style="text-align: center;">Собственная торговая марка для HoReCa : Полноценная линейка профессиональных продуктов и товаров массового спроса под вашим заказом.</h2>
     
     <div class="production-subtitle">
       <p>Собственные производственные мощности позволяют нам контролировать качество на каждом этапе — от отбора сырья до упаковки готовой продукции. Мы разрабатываем рецептуры, которые соответствуют требованиям ресторанов, кафе и гостиниц.</p>
